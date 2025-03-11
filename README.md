@@ -11,8 +11,8 @@ You can install this module via DKMS.
 ```sh
 sudo apt install dkms git build-essential linux-headers-$(uname -r)
 cd ~
-git clone https://github.com/Ta180m/zenpower3.git
-cd zenpower3
+git clone https://github.com/Sid127/zenstats.git
+cd zenstats
 sudo make dkms-install
 ```
 
@@ -37,10 +37,6 @@ Because zenpower is using same PCI device as k10temp, you have to disable k10tem
 5. Install new version `sudo make dkms-install`
 6. Activate zenstats `sudo modprobe zenstats`
 
-## Help needed
-It would be very helpful for me for further development of Zenstats if you can share debug data from zenstats. [Read more](https://github.com/ocerman/zenpower/issues/12)
-
 ## Notes
  - Some users reported that a restart is needed after module installation
- - If you are having trouble compiling zenstats under Ubuntu 18.04 (or older) with new upstream kernel, see [#23](https://github.com/ocerman/zenpower/issues/23)
  - The meaning of raw current values from SVI2 telemetry are not standardised so the current/power readings may not be accurate on all systems (depends on the board model).
